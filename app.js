@@ -1,9 +1,3 @@
-// let num1 = Number(prompt("Ingresa un numero")) ;
-// let num2 = Number(prompt("Ingresa otro número")) ;
-
-// let numero = alert("Ingresaste el número " + num1 + " Y el numero " + num2);
-
-
  let productosSuper = prompt("Ingrese el producto que desea comprar o fin para terminar")
  
  while (productosSuper != "fin") {
