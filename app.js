@@ -11,6 +11,7 @@
      
     alert ("Usted ingreso " + cantidad)
     console.log (cantidad)   
+    
     }else{
         alert("Dato ingresado incorrecto")
         cantidad = Number(prompt("Ingrese datos del 1 a 100"))
