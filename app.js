@@ -53,9 +53,9 @@ if (anios >= 18 ) {
             console.log (valor4);
         
 
-        let eleccionVehiculo = prompt("Elegí la marca del vehículo entre estas opciones:FORD,CHEVROLET,FIAT,PEUGEOT");
+        let eleccionVehiculo = prompt("Elegí la marca del vehículo entre estas opciones:FORD,CHEVROLET,FIAT,PEUGEOT").toUpperCase();
         const auto = [];
-        auto.push(eleccionVehiculo) ;
+        auto.push(eleccionVehiculo.toUpperCase()) ;
         console.log(auto);
         
 
@@ -64,45 +64,14 @@ if (anios >= 18 ) {
             case "FORD" :
                 alert("Usted elegió la marca Ford");
                 break;            
-            case "Ford" :
-                alert("Usted elegió la marca Ford");
-                break;
-            case "ford" :
-                alert("Usted elegió la marca Ford");
-                break;
-        
-            case "fiat":
-                alert("Usted elegió la marca Fiat");
-                break;
-        
-            case "Fiat":
-                alert("Usted elegió la marca Fiat");
-                break;
-        
+            
             case "FIAT":
                 alert("Usted elegió la marca Fiat");
-                break;
-        
-            case "chevrolet":
-                alert("Usted elegió la marca Chevrolet");
-                break;
-        
-            case "Chevrolet":
-                alert("Usted elegió la marca Chevrolet");
                 break;
         
             case "CHEVROLET":
                 alert("Usted elegió la marca Chevrolet");
                 break;
-        
-            case "peugeot":
-                alert("Usted elegió la marca Peugeot");
-                break;
-        
-            case "Peugeot":
-                alert("Usted elegió la marca Peugeot");
-                break;
-        
             case "PEUGEOT":
                 alert("Usted elegió la marca Peugeot");
                 break;
@@ -131,55 +100,25 @@ if (anios >= 18 ) {
             console.log (valor8)
 
 
-        let eleccionVehiculo = prompt("Elegí la marca del vehículo entre estas opciones:FORD,CHEVROLET,FIAT,PEUGEOT");
+        let eleccionVehiculo = prompt("Elegí la marca del vehículo entre estas opciones:FORD,CHEVROLET,FIAT,PEUGEOT").toUpperCase();
         const auto = [];
-        auto.push(eleccionVehiculo) ;
+        auto.push(eleccionVehiculo.toUpperCase()) ;
         console.log(auto);
         
+
         switch (eleccionVehiculo) {
         
             case "FORD" :
                 alert("Usted elegió la marca Ford");
-                break;
-            case "Ford" :
-                alert("Usted elegió la marca Ford");
-                break;
-            case "ford" :
-                alert("Usted elegió la marca Ford");
-                break;
-        
-            case "fiat":
-                alert("Usted elegió la marca Fiat");
-                break;
-        
-            case "Fiat":
-                alert("Usted elegió la marca Fiat");
-                break;
-        
+                break;            
+            
             case "FIAT":
                 alert("Usted elegió la marca Fiat");
-                break;
-        
-            case "chevrolet":
-                alert("Usted elegió la marca Chevrolet");
-                break;
-        
-            case "Chevrolet":
-                alert("Usted elegió la marca Chevrolet");
                 break;
         
             case "CHEVROLET":
                 alert("Usted elegió la marca Chevrolet");
                 break;
-        
-            case "peugeot":
-                alert("Usted elegió la marca Peugeot");
-                break;
-        
-            case "Peugeot":
-                alert("Usted elegió la marca Peugeot");
-                break;
-        
             case "PEUGEOT":
                 alert("Usted elegió la marca Peugeot");
                 break;
@@ -206,63 +145,33 @@ if (anios >= 18 ) {
             alert("Su cuota será de $" + valor12)
             console.log (valor12)
 
-        let eleccionVehiculo = prompt("Elegí la marca del vehículo entre estas opciones:FORD,CHEVROLET,FIAT,PEUGEOT");
+        let eleccionVehiculo = prompt("Elegí la marca del vehículo entre estas opciones:FORD,CHEVROLET,FIAT,PEUGEOT").toUpperCase();
         const auto = [];
-        auto.push(eleccionVehiculo) ;
-        console.log(auto)
+        auto.push(eleccionVehiculo.toUpperCase()) ;
+        console.log(auto);
+        
 
-switch (eleccionVehiculo) {
-
-    case "FORD" :
-        alert("Usted elegió la marca Ford");
-        break;
-    case "Ford" :
-        alert("Usted elegió la marca Ford");
-        break;
-    case "ford" :
-        alert("Usted elegió la marca Ford");
-        break;
-
-    case "fiat":
-        alert("Usted elegió la marca Fiat");
-        break;
-
-    case "Fiat":
-        alert("Usted elegió la marca Fiat");
-        break;
-
-    case "FIAT":
-        alert("Usted elegió la marca Fiat");
-        break;
-
-    case "chevrolet":
-        alert("Usted elegió la marca Chevrolet");
-        break;
-
-    case "Chevrolet":
-        alert("Usted elegió la marca Chevrolet");
-        break;
-
-    case "CHEVROLET":
-        alert("Usted elegió la marca Chevrolet");
-        break;
-
-    case "peugeot":
-        alert("Usted elegió la marca Peugeot");
-        break;
-
-    case "Peugeot":
-        alert("Usted elegió la marca Peugeot");
-        break;
-
-    case "PEUGEOT":
-        alert("Usted elegió la marca Peugeot");
-        break;
-
-    default:
-        alert("El dato ingresado no corresponde, vuelva a cargar la página")
-       break;
-} 
+        switch (eleccionVehiculo) {
+        
+            case "FORD" :
+                alert("Usted elegió la marca Ford");
+                break;            
+            
+            case "FIAT":
+                alert("Usted elegió la marca Fiat");
+                break;
+        
+            case "CHEVROLET":
+                alert("Usted elegió la marca Chevrolet");
+                break;
+            case "PEUGEOT":
+                alert("Usted elegió la marca Peugeot");
+                break;
+        
+            default:
+                alert("El dato ingresado no corresponde, vuelva a cargar la página")
+               break;
+        } 
 
     }else if (salario >= 200001) {
         alert(nombre + " usted puede acceder a una finaciacion de $1000000")
@@ -280,65 +189,33 @@ switch (eleccionVehiculo) {
             alert("Su cuota será de $" + valor16)
             console.log (valor16)
 
-        let eleccionVehiculo = prompt("Elegí la marca del vehículo entre estas opciones:FORD,CHEVROLET,FIAT,PEUGEOT");
+        let eleccionVehiculo = prompt("Elegí la marca del vehículo entre estas opciones:FORD,CHEVROLET,FIAT,PEUGEOT").toUpperCase();
         const auto = [];
-        auto.push(eleccionVehiculo) ;
-        console.log(auto)
+        auto.push(eleccionVehiculo.toUpperCase()) ;
+        console.log(auto);
+        
 
-switch (eleccionVehiculo) {
-
-    case "FORD" :
-        alert("Usted elegió la marca Ford");
-        break;
-
-    case "Ford" :
-        alert("Usted elegió la marca Ford");
-        break;
-
-    case "ford" :
-        alert("Usted elegió la marca Ford");
-        break;
-
-    case "fiat":
-        alert("Usted elegió la marca Fiat");
-        break;
-
-    case "Fiat":
-        alert("Usted elegió la marca Fiat");
-        break;
-
-    case "FIAT":
-        alert("Usted elegió la marca Fiat");
-        break;
-
-    case "chevrolet":
-        alert("Usted elegió la marca Chevrolet");
-        break;
-
-    case "Chevrolet":
-        alert("Usted elegió la marca Chevrolet");
-        break;
-
-    case "CHEVROLET":
-        alert("Usted elegió la marca Chevrolet");
-        break;
-
-    case "peugeot":
-        alert("Usted elegió la marca Peugeot");
-        break;
-
-    case "Peugeot":
-        alert("Usted elegió la marca Peugeot");
-        break;
-
-    case "PEUGEOT":
-        alert("Usted elegió la marca Peugeot");
-        break;
-
-    default:
-        alert("El dato ingresado no corresponde, vuelva a cargar la página")
-       break;
-} 
+        switch (eleccionVehiculo) {
+        
+            case "FORD" :
+                alert("Usted elegió la marca Ford");
+                break;            
+            
+            case "FIAT":
+                alert("Usted elegió la marca Fiat");
+                break;
+        
+            case "CHEVROLET":
+                alert("Usted elegió la marca Chevrolet");
+                break;
+            case "PEUGEOT":
+                alert("Usted elegió la marca Peugeot");
+                break;
+        
+            default:
+                alert("El dato ingresado no corresponde, vuelva a cargar la página")
+               break;
+        } 
 
     } else{
         alert(nombre + "su salario no cumple con el minimo necesario.")}
@@ -349,3 +226,22 @@ console.log (anios);}
 const datosUsuarios = nombr.concat(documento,tel,cumpleaños,anios)
 
 console.log(datosUsuarios)
+
+console.dir(document)
+
+let txt = document.getElementsByTagName("p")
+console.log(txt)
+
+let agradece = document.getElementById("gracias")
+agradece.innerText = "Muchas gracias en breve uno de nuestros asesores se pondrá en contacto con usted para completar su trámite"
+
+let agrego = document.getElementById("contact")
+agrego.innerHTML = "<h2>Contactanos</h2>"
+console.log(agrego)
+
+let crear = document.createElement("p")
+crear.innerHTML = "<p>Tel:2615698167</p> <p>Domicilio:Calle Falsa 123</p>"
+document.body.append(crear)
+
+let borrar = document.getElementById("subtitulo")
+borrar.remove();
