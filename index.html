@@ -3,29 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>Venta de autos</title>
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSM-Inicio</title>
 </head>
 <body>
+    <h1> MSM </h1>
 
-    <h1 id="titulo">BIENVENIDO!</h1>
+    <div id="formulario">
+        <h2 id="subtitulo">Complete sus datos</h2>
 
-    <h2 id="subtitulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos modi necessitatibus labore totam id, impedit iure perferendis voluptatem, velit vitae, facere enim quod alias porro maiores odit amet aspernatur molestias!
-    Dolore quisquam sequi culpa animi voluptas officiis ab omnis fugit corrupti hic ratione accusamus amet quibusdam, maxime labore voluptatibus odio laudantium ipsam eius repudiandae aperiam ullam expedita. Fugit, molestias dolorum.
-    Totam possimus alias, nesciunt qui veniam repellendus quo amet molestiae aliquam? Officia magni sunt placeat, ut, est nesciunt repellat praesentium dolorem quae accusamus quam sed provident, quod suscipit aliquid quis?</h2>
+        <input type="text" placeholder="Ingrese su nombre" required id="nombre">
+        <input type="text" placeholder="Ingrese su apellido" id="apellido">
+        <input type="number" placeholder="Ingrese su edad" id="edad"> 
+        <input type="date" placeholder="Ingrese su fecha de nacimiento" id="fecha">
+        <input type="email" placeholder="Ingrese su e-mail" id="mail">
+        <input type="number" placeholder="Ingrese su telefono" id="telefono">
+        
+        <p>Seleccione una marca</p>
+        <select name="marca" id="marca">
+            <option value="Fiat">Fiat</option>
+            <option value="Ford">Ford</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Renault">Renault</option>
+        </select>
+        
+        <button type="button" id="btn">Enviar</button>
     
-    
-    <p id="gracias">Muchas gracias por completar tus datos.</p>
-    
-    <p id="reintentar">En el caso que no pudo completar los datos, podrá volver a hacerlo re-ingresando nuevamente a nuestra página</p>
+    </div>
 
-        <div id="contact">
-            
-        </div>
-
-    <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
+
 </html>
