@@ -136,22 +136,14 @@ function validarEdad() {
     
 }
 
-//Creacion de formulario en HTML
-
-function nuevoFormulario(){
-    let div1 = document.createElement("div")
-    div1.id = "formulario2"
-    document.body.append(div1)
-
-    generarNuevoFormulario()
-}
 
 
 //Formulario 2 para funcion nuevoFormulario
 
-function generarNuevoFormulario(){
+function nuevoFormulario(){
+    let formulario2 = document.getElementById ("formulario2")
 
-      let p1 = document.createElement("h2")
+    let p1 = document.createElement("h2")
     p1.innerHTML = "<h2>Sus datos está correctos, por favor ingrese los datos restantes para calcular monto disponible y cuota</h2>"
     formulario2.append(p1)
     
@@ -167,14 +159,29 @@ function generarNuevoFormulario(){
     boton_2.id = "btn2"
     boton_2.innerHTML = "Enviar"
     formulario2.append(boton_2)
+    boton_2.addEventListener("click",enviar2)
+
+
+    reset()
 }
 
+function reset() {
+    document.getElementById("nombre").value = ""
+    document.getElementById("apellido").value = ""
+    document.getElementById("edad").value = ""
+    document.getElementById("fecha").value = ""
+    document.getElementById("mail").value = ""
+    document.getElementById("telefono").value = ""
+    document.getElementById("marca").value = ""
+        
+}
 
 //Verificacion de Salario y montos para cuotas
 
 function ingreso_salario() {
 
     let salario = document.getElementById("salario").value;
+    
     info_clientes.push(salario)
 
     console.log(info_clientes)
@@ -208,12 +215,6 @@ function ingreso_salario() {
 }
 
 //Funcion boton 2
-
-let boton_2 = document.getElementById("btn2");
-
-boton_2.onclick = enviar2
-
-
 
 function enviar2(){
  
