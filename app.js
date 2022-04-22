@@ -3,6 +3,7 @@
 let info_clientes = new Array();
 const guardo_info = "info_clientes";
 
+
 class Clientes {
 
 constructor(nombre,apellido,edad,fecha,mail,telefono,marca){
@@ -14,6 +15,7 @@ constructor(nombre,apellido,edad,fecha,mail,telefono,marca){
     this.telefono = telefono;
     this.marca = marca;
 }
+
 }
 
 
@@ -24,15 +26,10 @@ let boton_1 = document.getElementById("btn")
 boton_1.addEventListener("click",enviar) 
 
 function enviar(){
-    if(validarDatos()){
+    validarDatos() ? cargaDatosClientes() : alert("Por favor complete todos los datos solicitados")
 
-        cargaDatosClientes()
-    
-    } else{
-
-        alert("Por favor complete todos los datos solicitados")
-    }
 }
+
 
 
 //Valida datos
@@ -93,15 +90,15 @@ function validarDatos(){
 function cargaDatosClientes(){
 
 
-let nombre = document.getElementById("nombre").value
-let apellido = document.getElementById("apellido").value
-let edad = document.getElementById("edad").value
-let fecha = document.getElementById("fecha").value
-let mail = document.getElementById("mail").value
-let telefono = document.getElementById("telefono").value
-let marca = document.getElementById("marca").value
+let nombre1 = document.getElementById("nombre").value
+let apellido1 = document.getElementById("apellido").value
+let edad1 = document.getElementById("edad").value
+let fecha1 = document.getElementById("fecha").value
+let mail1 = document.getElementById("mail").value
+let telefono1 = document.getElementById("telefono").value
+let marca1 = document.getElementById("marca").value
 
-let cliente = new Clientes(nombre,apellido,edad,fecha,mail,telefono,marca);
+let cliente = new Clientes(nombre1,apellido1,edad1,fecha1,mail1,telefono1,marca1);
 
 validarEdad()
 
@@ -109,10 +106,24 @@ info_clientes.push(cliente);
 
 localStorage.setItem(guardo_info,JSON.stringify(info_clientes));
 
-
 console.log(info_clientes)
 
+//Acceso condicional, desestructuracion y spread
 
+console.log(cliente?.nombre || "No existe")
+console.log(cliente?.telefono || "No existe")
+console.log(cliente?.nacionalidad || "No existe")
+
+const {nombre,apellido,telefono} = cliente
+
+console.log(nombre)
+console.log(apellido)
+console.log(telefono)
+
+const objeto2 = {
+    ...cliente
+}
+console.log(objeto2)
 }
 
 
@@ -122,20 +133,16 @@ function validarEdad() {
 
     let valido_edad = document.getElementById("edad").value;
     
-    if (valido_edad >= 18) {
-
-        nuevoFormulario()
-        
-    }else{
-
-        let h2 = document.createElement("h2")
-        h2.innerHTML = "<h2>Es necesario ser mayor de 18 años para solicitar el prestamo</h2>"
-        document.body.append(h2)
-    }
-
+    valido_edad >= 18 ? nuevoFormulario() : creandoH2()
     
+        
 }
 
+function creandoH2(){
+    let h2 = document.createElement("h2")
+    h2.innerHTML = "<h2>Es necesario ser mayor de 18 años para solicitar el prestamo</h2>"
+    document.body.append(h2)
+}
 
 
 //Formulario 2 para funcion nuevoFormulario
@@ -252,3 +259,5 @@ function recibir_info_clientes(){
         guardo_info = recibo;
     }
 }
+
+
