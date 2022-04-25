@@ -8,36 +8,92 @@
     <title>MSM-Inicio</title>
 </head>
 <body>
+
     <h1> MSM </h1>
 
-    <div id="formulario">
-        <h2 id="subtitulo">Complete sus datos</h2>
+    <div class="quienesSomos">
 
-        <input type="text" placeholder="Ingrese su nombre" required id="nombre">
-        <input type="text" placeholder="Ingrese su apellido" id="apellido">
-        <input type="number" placeholder="Ingrese su edad" id="edad"> 
-        <input type="date" placeholder="Ingrese su fecha de nacimiento" id="fecha">
-        <input type="email" placeholder="Ingrese su e-mail" id="mail">
-        <input type="number" placeholder="Ingrese su telefono" id="telefono">
+        <h2 class="subQuienes">¿Quienes Somos?</h2>
+
+        <img src="./Imagenes/concesionaria-autos-acarajpg.webp" alt="Imagen autos varios" class="autosVarios">
         
-        <p>Seleccione una marca</p>
-        <select name="marca" id="marca">
-            <option value="Fiat">Fiat</option>
-            <option value="Ford">Ford</option>
-            <option value="Chevrolet">Chevrolet</option>
-            <option value="Renault">Renault</option>
-        </select>
-        
-        <button type="button" id="btn">Enviar</button>
+        <p class="texto">Somos una empresa familia, que busca acompañarte en la elección de tu nuevo auto.
+                                Podés elegir tu 0km o el usado que mejor se adapte a tu estilo de vida.
+                                Estamos para brindarte el mejor vehículo y la finaciación ideal para vos</p>
+
+    </div>
+   
     
+    <Section id="galofertas">
+
+        <h2 class="nuestrosAutos">Nuestros autos</h2>
+
+        <div class="divofertas">
+          <img src="./Imagenes/Classic.jpg" alt="Chevrolet Classic" class="imgofertas">
+          <p class="textoofertas">Classic 2016</p>
+          <button class="botones"id="btninfo1">Más info</button>
+        </div>
+            
+        <div class="divofertas">
+          <img src="./Imagenes/Clio.jpg" alt="Renault Clio" class="imgofertas">
+          <p class="textoofertas">Clio 2018</p>
+          <button id="btninfo2" class="botones">Más info</button>
+        </div>
+        
+        <div class="divofertas col">
+          <img src="./Imagenes/Fiesta.jpg" alt="Ford Fiesta" class="imgofertas">
+          <p class="textoofertas">Fiesta 2019</p>
+          <button class="botones" id="btninfo3">Más info</button>
+        </div>
+        
+        <div class="divofertas">
+          <img src="./Imagenes/Gol.jfif" alt="Volkswagen Gol" class="imgofertas">
+          <p class="textoofertas">Gol 2022</p>
+          <button id="btninfo4" class="botones">Más info</button>  
+        </div>
+        
+        <div class="divofertas">
+          <img src="./Imagenes/Kangoo.jpg" alt="Renault Kangoo" class="imgofertas">
+          <p class="textoofertas">Kangoo 2016</p>
+          <button id="btninfo5" class="botones">Más info</button>  
+        </div>
+        
+        <div class="divofertas">
+          <img src="./Imagenes/Siena.jpg" alt="Fiat Siena" class="imgofertas">
+          <p class="textoofertas">Siena 2012</p>
+          <button id="btninfo6" class="botones">Más info</button>  
+        </div>
+    </Section>
+    
+   
+    <div class="calculaCuota">
+        <h2 class="subCuota">Calcula tu cuota</h2>
+        <p class="texto">En MSM te ayudamos a cumpir el sueño de tu auto.
+           Es por esto que te ofrecemos nuestro plan de facilidades,
+           donde podes financiar hasta el 60% de tu vehículo en 60 cuotas.
+           
+           Completa tus datos y calcula el monto de tus cuotas.
+        </p>
+        <input type="number" placeholder="Ingresa el monto a solicitar" class="monto">
+
     </div>
 
     <div id="formulario2">
 
 
     </div>
-
+    
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>></script>
 <script src="app.js"></script>
+<script src="auto.js"></script>
+<script src="funcionbotones.js"></script>
+<script src="autoID1.js"></script>
+<script src="autoID2.js"></script>
+<script src="autoID3.js"></script>
+<script src="autoID4.js"></script>
+<script src="autoID5.js"></script>
+<script src="autoID6.js"></script>
+
 </body>
 
 </html>

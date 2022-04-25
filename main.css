@@ -1,29 +1,243 @@
+/* Generales */
 *{
     margin: 0%;
     padding: 0%;
 }
 body{
-    background-color: rgb(65, 207, 160);
+    background-color: rgb(162, 177, 180);
     display: flex;
     flex-direction: column;
     font-family: 'Courier New', Courier, monospace;
     
 }
 h1{
-    font-size: 45px;
+    font-size: 65px;
     margin: auto;
     padding-bottom: 3%;
     text-decoration: underline;
 }
 
-#formulario{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+/* Quienes somos */
+.quienesSomos{
+    background-image: linear-gradient(rgb(162, 177, 180),rgb(64, 94, 102),rgb(20, 159, 194));
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+.autosVarios{
+    height: 300px;
+    width: 400px;
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 30px;
+}
+.subQuienes{
+    text-decoration: underline;
     margin: auto;
+    font-size: 50px;
+    grid-column-start: 1;
+    grid-column-end: 4;
     
 }
 
+.texto{
+    grid-column-start: 3;
+    font-size: 25px;
+    margin: auto;
+}
+/* Ofertas */
+#galofertas{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    column-gap: 20px;
+    justify-content: center;
+    background-image: linear-gradient(rgb(20, 159, 194),rgb(162, 177, 180),rgb(64, 94, 102));
+    padding: 100px;
+}
+
+.divofertas{
+    position: relative;
+    padding: 10px;
+}
+.imgofertas{
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.textoofertas{
+    background-image: radial-gradient(rgb(17, 28, 37),rgb(24, 65, 88));
+    color: white;
+    display: flex;
+    justify-content: center;
+    border: solid 2px black;
+    opacity: 80%;
+    font-size: 30px;
+    margin-left: 30px;
+
+}
+.nuestrosAutos{
+    text-decoration: underline;
+    margin: auto;
+    font-size: 50px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding: 20px;
+}
+.botones{
+    position: relative;
+    margin-left: 30px;
+    align-items: center;
+    height: 30px;
+    width: 250px;
+    font-size: 30px;
+    text-align: center;
+    background-image: radial-gradient(rgb(178, 212, 243),rgb(24, 65, 88));
+    border-radius: 20px;
+}
+
+/* Ficha autos */
+#fichaAuto{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 600px;
+    border: solid 2px black;
+    background-image: radial-gradient(rgb(178, 212, 243),rgb(24, 65, 88));
+    border-radius: 20px;
+    z-index: 100;
+}
+#subFicha{
+    text-decoration: underline;
+    margin: auto;
+    display: flex;
+    font-size: 30px;
+    padding: 20px;
+}
+#lista{
+    font-size: 20px;
+    list-style: none;
+    margin: auto;    
+}
+#divBotones{
+    padding: 3px;
+   }
+   
+#botonCancelar{
+       margin: auto;
+       height: 30px;
+       width: 250px;
+       font-size: 30px;
+       text-align: center;
+       background-image: radial-gradient(rgb(196, 80, 80),rgb(231, 76, 71));
+       border-radius: 20px;
+   }
+#botonCompra{
+       margin: auto;
+       height: 30px;
+       width: 250px;
+       font-size: 30px;
+       text-align: center;
+       background-image: radial-gradient(rgb(178, 212, 243),rgb(24, 65, 88));
+       border-radius: 20px;
+   }
+
+#imgAuto1{
+    width: 450px;
+    height: 250px;
+    margin: auto;
+}
+
+#imgAuto2{
+    width: 450px;
+    height: 250px;
+    margin: auto;
+}
+#imgAuto3{
+    width: 450px;
+    height: 250px;
+    margin: auto;
+}
+#imgAuto4{
+    width: 450px;
+    height: 250px;
+    margin: auto;
+}
+#imgAuto5{
+    width: 450px;
+    height: 250px;
+    margin: auto;
+}
+#imgAuto6{
+    width: 450px;
+    height: 250px;
+    margin: auto;
+}
+
+#botonDatos{
+    margin: auto;
+    height: 30px;
+    width: 350px;
+    font-size: 30px;
+    text-align: center;
+    background-image: radial-gradient(rgb(178, 212, 243),rgb(24, 65, 88));
+    border-radius: 20px;
+}
+/* Formulario compra */
+#formulario{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 50px;
+}
+input{
+    margin: 2px;
+}
+
+#subformulario{
+    text-decoration: underline;
+    margin: auto;
+    display: flex;
+    font-size: 25px;
+    padding: 20px;
+}
+input{
+    margin: auto;
+}
+
+
+
+
+
+/* Cuotas */
+.calculaCuota{
+    
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-image: linear-gradient(rgb(64, 94, 102),rgb(20, 159, 194),rgb(162, 177, 180));
+
+}
+.subCuota{
+    text-decoration: underline;
+    margin: auto;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.monto{
+    margin:auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: solid 3px black;
+    width: 400px;  
+    text-align: center;
+}
+/* ELIMINAR */
 #formulario2{
     background-color: yellow;
     display: flex;
