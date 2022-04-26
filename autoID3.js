@@ -1,3 +1,6 @@
+let guardoAutos3 = "ID3autos"
+
+
 let boton_ID3 = document.getElementById("btninfo3")
 
 boton_ID3.addEventListener("click",infoAutoID3)
@@ -11,6 +14,7 @@ function infoAutoID3(){
     crearFicha()
     cargaDatosAuto3()
     datosAuto.push(autoID_3)
+    localStorage.setItem(guardoAutos3,JSON.stringify(datosAuto))
     console.log(datosAuto)
 }
 
@@ -57,4 +61,15 @@ divBotones.id = "divBotones"
 fichaAuto.append(divBotones)
 
 botones()
+}
+
+function recibir_info_auto(){
+
+    let recibo = localStorage.getItem(guardoAutos3);
+    if (recibo){
+
+        recibo = JSON.parse(recibo);
+
+        guardoAutos3 = recibo;
+    }
 }
