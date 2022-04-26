@@ -63,7 +63,7 @@ fichaAuto.append(divBotones)
 botones()
 }
 
-function recibir_info_auto(){
+function recibir_info_auto3(){
 
     let recibo = localStorage.getItem(guardoAutos3);
     if (recibo){

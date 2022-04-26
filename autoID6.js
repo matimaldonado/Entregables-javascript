@@ -66,7 +66,7 @@ botones()
 }
 
 
-function recibir_info_auto(){
+function recibir_info_auto6(){
 
     let recibo = localStorage.getItem(guardoAutos6);
     if (recibo){
