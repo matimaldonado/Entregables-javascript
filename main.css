@@ -16,6 +16,20 @@ h1{
     padding-bottom: 3%;
     text-decoration: underline;
 }
+/*noticias*/
+
+#noticias{
+    border: solid 2px black;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    padding: 3px;
+}
+#imgnoticias{
+    width: 200px;
+    height: 100px;
+    margin: auto;
+}
 
 /* Quienes somos */
 .quienesSomos{

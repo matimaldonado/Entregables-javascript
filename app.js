@@ -174,11 +174,27 @@ function recibir_info_clientes(){
 
 //API
 
-fetch("https://api.estadisticasbcra.com/milestones",{
-  headers:{
-    "Authorization": "BEARER eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODMxNTY0OTcsInR5cGUiOiJleHRlcm5hbCIsInVzZXIiOiJzYW50aW8uODlAaG90bWFpbC5jb20ifQ.EkX-a8LkQF5n95JHiu7WfXasVEqv77NZXprX64K6zKTGoBzcTTSMISziTqErJL9Zj8d9T_wHSIW5HbWQWt_jOw"
-  },
-  mode:'no-cors'
+// fetch("https://api.estadisticasbcra.com/milestones",{
+//   headers:{
+//     "Authorization": "BEARER eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODMxNTY0OTcsInR5cGUiOiJleHRlcm5hbCIsInVzZXIiOiJzYW50aW8uODlAaG90bWFpbC5jb20ifQ.EkX-a8LkQF5n95JHiu7WfXasVEqv77NZXprX64K6zKTGoBzcTTSMISziTqErJL9Zj8d9T_wHSIW5HbWQWt_jOw"
+//   },
+//   mode:'no-cors'
+// })
+//   .then((response)=> response.json())
+//   .then((json)=> console.log(json));
+
+
+  fetch("https://newsapi.org/v2/everything?q=tesla&from=2022-04-04&sortBy=publishedAt&apiKey=bd9f25b3d486488badbe653056c50a42")
+  .then((resp)=>resp.json())
+  .then((data)=>{ console.log(data.articles)
+
+  const noticias = document.getElementById("noticias")
+
+  noticias.innerHTML =
+   "<h2>"+(data?.articles[16].title)+"</h2>" +
+   "<img id= imgnoticias src="+(data?.articles[16].urlToImage)+">"+
+   "<h5>"+(data?.articles[16].description)+"</h5>"+
+   "<p>"+(data?.articles[16].content)+"</p>"+
+   "<a>"+(data?.articles[16].url)+"</a>";
+
 })
-  .then((response)=> response.json())
-  .then((json)=> console.log(json));
