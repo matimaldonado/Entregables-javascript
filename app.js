@@ -172,3 +172,13 @@ function recibir_info_clientes(){
 }
 
 
+//API
+
+fetch("https://api.estadisticasbcra.com/milestones",{
+  headers:{
+    "Authorization": "BEARER eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODMxNTY0OTcsInR5cGUiOiJleHRlcm5hbCIsInVzZXIiOiJzYW50aW8uODlAaG90bWFpbC5jb20ifQ.EkX-a8LkQF5n95JHiu7WfXasVEqv77NZXprX64K6zKTGoBzcTTSMISziTqErJL9Zj8d9T_wHSIW5HbWQWt_jOw"
+  },
+  mode:'no-cors'
+})
+  .then((response)=> response.json())
+  .then((json)=> console.log(json));
