@@ -64,7 +64,11 @@
           <button id="btninfo6" class="botones">Más info</button>  
         </div>
     </Section>
-    
+
+    <section id="cotizar" >
+      <h2 id="subcoti"> Cotizaciones oficiales</h2>
+      <div id = "cotizaciones"></div>
+    </section>
    
     <div class="calculaCuota">
         <h2 class="subCuota">Calcula tu cuota</h2>
@@ -74,17 +78,23 @@
           
            Completa tus datos y calcula el monto de tus cuotas.
         </p>
-        <input type="number" placeholder="Ingresa el monto a solicitar" class="monto">
 
-        <section id = "noticias">
-      
-        </section>
-    
-    
+        <input type="number" placeholder="Ingresa el monto a solicitar" id="monto">
+        
+        <label for="cantidadCuotas" id="tituloCantidadCuotas"> Elija cantidad de cuotas</label>
+        <select name="cantidadCuotas" id="cantidadCuotas">
+          <option value="12">12</option>
+          <option value="24">24</option>
+          <option value="36">36</option>
+          <option value="48">48</option>
+          <option value="60">60</option>
+      </select>
+
+      <button id="botonCuotas">Calcular</button>   
     </div>
 
-    <div id="formulario2">
-        </div>
+    <div id="formularioCuota">
+    </div>
     
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>></script>
 <script src="app.js"></script>
@@ -96,7 +106,7 @@
 <script src="autoID4.js"></script>
 <script src="autoID5.js"></script>
 <script src="autoID6.js"></script>
-
+<script src="Cuotas.js"></script>
 </body>
 
 </html>

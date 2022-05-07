@@ -1,105 +1,144 @@
-//Formulario 2 para funcion nuevoFormulario
 
-function nuevoFormulario(){
-    let formulario2 = document.getElementById ("formulario2")
+//Calculo cuotas
+let calculoCuota = new Array()
+const guardo_cuota = "info_cuota";
 
-    let p1 = document.createElement("h2")
-    p1.innerHTML = "<h2>Sus datos está correctos, por favor ingrese los datos restantes para calcular monto disponible y cuota</h2>"
-    formulario2.append(p1)
-    
-    let input1 = document.createElement("input")
-    input1.type = "Number"
-    input1.id = "salario"
-    input1.required
-    input1.placeholder = "Ingrese su salario neto"
-    formulario2.append(input1)
+let monto = document.getElementsByClassName("monto").value
+let cuotas = document.getElementById ("cantidadCuotas")
 
-    let boton_2 = document.createElement("button")
-    boton_2.type = "button"
-    boton_2.id = "btn2"
-    boton_2.innerHTML = "Enviar"
-    formulario2.append(boton_2)
-    boton_2.addEventListener("click",enviar2)
+botonCuotas = document.getElementById("botonCuotas")
+botonCuotas.addEventListener("click", calculo)
 
+function calculo(){
+let monto = document.getElementById("monto").value;
+let cuotas = document.getElementById("cantidadCuotas").value;
 
-    reset()
-}
+console.log(cuotas)
+console.log(monto)
 
-function reset() {
-    document.getElementById("nombre").value = ""
-    document.getElementById("apellido").value = ""
-    document.getElementById("edad").value = ""
-    document.getElementById("fecha").value = ""
-    document.getElementById("mail").value = ""
-    document.getElementById("telefono").value = ""
-    document.getElementById("marca").value = ""
+switch (cuotas) {
+    case "12":
+        const montoCuotas12 = parseFloat(monto) /  parseFloat(cuotas)
+        const calculoInteres12 = parseFloat(montoCuotas12) * 0.80
+        const  total12 = parseInt(montoCuotas12) + parseInt(calculoInteres12)
+
+        calculoCuota.push(montoCuotas12)
+        calculoCuota.push(calculoInteres12)
+        calculoCuota.push(total12)
         
-}
+        console.log(calculoCuota)
 
-//Verificacion de Salario y montos para cuotas
 
-function ingreso_salario() {
+        let formularioCuota12 = document.getElementById("formularioCuota")
+        localStorage.setItem(guardo_cuota,JSON.stringify(calculoCuota));
 
-    let salario = document.getElementById("salario").value;
-    
-    info_clientes.push(salario)
+        formularioCuota12.innerHTML =
+            "<h2>Usted ingreso los siguientes datos</h2>"+
+            "<p> Monto solicitado: $"+ monto + "</p>" +
+            "<p> Total de cuotas: "+ cuotas + "</p>" +
+            "<h3> El monto total de su cuota sería: $"+ total12 + "</h3>"
+               
+        break;
+    case "24":
+        const montoCuotas24 = parseFloat(monto) / parseFloat(cuotas)
+        const calculoInteres24 = parseFloat(montoCuotas24) * 1.60
+        const  total24 = parseInt(montoCuotas24) + parseInt(calculoInteres24)
 
-    console.log(info_clientes)
-
-    if (salario >= 50001 && salario <= 100000 ) { 
-    
-        let p2 = document.createElement("p")
-        p2.innerHTML = "<p> Usted puede acceder a una finaciacion de $200000, en breve un asesor se contactará </p>"
-        document.body.append(p2)
+        calculoCuota.push(montoCuotas24)
+        calculoCuota.push(calculoInteres24)
+        calculoCuota.push(total24)
         
-    }else if (salario >= 100001 && salario <= 150000 ) {
-        let p3 = document.createElement("p")
-        p3.innerHTML = "<p> Usted puede acceder a una finaciacion de $400000, en breve un asesor se contactará </p>"
-        document.body.append(p3)
+        console.log(calculoCuota)
+        localStorage.setItem(guardo_cuota,JSON.stringify(calculoCuota));
+
+        let formularioCuota24 = document.getElementById("formularioCuota")
         
-    }else if (salario >= 150001 && salario <= 200000 ) {
-        let p4 = document.createElement("p")
-        p4.innerHTML = "<p> Usted puede acceder a una finaciacion de $600000, en breve un asesor se contactará </p>"
-        document.body.append(p4)
-    
-    }else if (salario >= 200001) {
-        let p5 = document.createElement("p")
-        p5.innerHTML = "<p> Usted puede acceder a una finaciacion de $1000000, en breve un asesor se contactará </p>"
-        document.body.append(p5)
-    }else{
-        let p6 = document.createElement("p")
-        p6.innerHTML = "<p> Su salario no cumple los requisitos necesarios, en breve un asesor se contactará </p>"
-        document.body.append(p6)
+        formularioCuota24.innerHTML =
+            "<h2>Usted ingreso los siguientes datos</h2>"+
+            "<p> Monto solicitado: $"+ monto + "</p>" +
+            "<p> Total de cuotas: "+ cuotas + "</p>" +
+            "<h3> El monto total de su cuota sería: $"+ total24 + "</h3>"
+        
+        break;
 
-    }    
+    case "36":
+        const montoCuotas36 = parseFloat(monto) / parseFloat(cuotas)
+        const calculoInteres36 = parseFloat(montoCuotas36) * 2.40
+        const  total36 = parseInt(montoCuotas36) + parseInt(calculoInteres36)
+
+        calculoCuota.push(montoCuotas36)
+        calculoCuota.push(calculoInteres36)
+        calculoCuota.push(total36)
+        
+        console.log(calculoCuota)
+
+        let formularioCuota36 = document.getElementById("formularioCuota")
+        localStorage.setItem(guardo_cuota,JSON.stringify(calculoCuota));
+
+        formularioCuota36.innerHTML =
+            "<h2>Usted ingreso los siguientes datos</h2>"+
+            "<p> Monto solicitado: $"+ monto + "</p>" +
+            "<p> Total de cuotas: "+ cuotas + "</p>" +
+            "<h3> El monto total de su cuota sería: $"+ total36 + "</h3>"
+        
+            break;
+    
+    case "48":
+        const montoCuotas48 = parseFloat(monto) / parseFloat(cuotas)
+        const calculoInteres48 = parseFloat(montoCuotas48) * 3.20
+        const  total48 = parseInt(montoCuotas48) + parseInt(calculoInteres48)
+        calculoCuota.push(montoCuotas48)
+        calculoCuota.push(calculoInteres48)
+        calculoCuota.push(total48)
+        
+        console.log(calculoCuota)
+        localStorage.setItem(guardo_cuota,JSON.stringify(calculoCuota));
+
+        let formularioCuota48 = document.getElementById("formularioCuota")
+        
+        formularioCuota48.innerHTML =
+            "<h2>Usted ingreso los siguientes datos</h2>"+
+            "<p> Monto solicitado: $"+ monto + "</p>" +
+            "<p> Total de cuotas: "+ cuotas + "</p>" +
+            "<h3> El monto total de su cuota sería: $"+ total48 + "</h3>"
+        
+        break;
+
+    case "60":
+        const montoCuotas60 = parseFloat(monto) / parseFloat(cuotas)
+        const calculoInteres60 = parseFloat(montoCuotas60) * 4
+        const  total60 = parseInt(montoCuotas60) + parseInt(calculoInteres60)
+        calculoCuota.push(montoCuotas60)
+        calculoCuota.push(calculoInteres60)
+        calculoCuota.push(total60)
+        
+        console.log(calculoCuota)
+        localStorage.setItem(guardo_cuota,JSON.stringify(calculoCuota));
+        
+        let formularioCuota60 = document.getElementById("formularioCuota")
+        
+        formularioCuota60.innerHTML =
+            "<h2>Usted ingreso los siguientes datos</h2>"+
+            "<p> Monto solicitado: $"+ monto + "</p>" +
+            "<p> Total de cuotas: "+ cuotas + "</p>" +
+            "<h3> El monto total de su cuota sería: $"+ total60 + "</h3>"
+        
+        break;
 }
 
-//Funcion boton 2
-
-function enviar2(){
- 
-    if(validarDatos2){
-  
-        ingreso_salario()
-
- }else{
-   alert("Complete los datos solicitados")
- }   
 }
 
-//Validacion salario
-function validarDatos2(){
 
-    let datos_salario = document.getElementById("salario").value;
-    
-    if (!datos_salario ){
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Ingrese todos los datos solicitados',
-          })
-        return false;
+function recibircuota(){
+
+    let recibocuota = localStorage.getItem(guardo_cuota);
+    if (recibocuota){
+
+        recibocuota = JSON.parse(recibocuota);
+
+        guardo_cuota = recibocuota;
     }
-
-    return true;
 }
+
+
+

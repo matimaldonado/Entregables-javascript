@@ -16,20 +16,6 @@ h1{
     padding-bottom: 3%;
     text-decoration: underline;
 }
-/*noticias*/
-
-#noticias{
-    border: solid 2px black;
-    width: 600px;
-    height: 400px;
-    margin: auto;
-    padding: 3px;
-}
-#imgnoticias{
-    width: 200px;
-    height: 100px;
-    margin: auto;
-}
 
 /* Quienes somos */
 .quienesSomos{
@@ -222,11 +208,30 @@ input{
     margin: auto;
 }
 
-
+/*API*/
+#cotizar{
+    display: flex;
+    flex-direction: column;
+}
+#cotizaciones{
+    border: solid 2px black;
+    width: 200px;
+    height: 180px;
+    margin: auto;
+    padding: 3px;
+    padding-left: 60px;
+}
+#subcoti{
+    text-decoration: underline;
+    margin: auto;
+    font-size: 40px;
+    padding: 20px;
+}
 
 
 
 /* Cuotas */
+
 .calculaCuota{
     
     display: flex;
@@ -242,7 +247,7 @@ input{
     padding: 20px;
 }
 
-.monto{
+#monto{
     margin:auto;
     margin-top: 20px;
     border-radius: 10px;
@@ -251,9 +256,35 @@ input{
     width: 400px;  
     text-align: center;
 }
-/* ELIMINAR */
-#formulario2{
-    background-color: yellow;
+#tituloCantidadCuotas{
+    margin:auto;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+#cantidadCuotas{
+    margin:auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: solid 3px black;
+    width: 100px;  
+    text-align: center;
+}
+
+#botonCuotas{
+    margin:auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: solid 3px black;
+    width: 200px;  
+    text-align: center;
+    background-image: linear-gradient(rgb(87, 59, 64),rgb(158, 114, 122),rgb(168, 72, 90));
+}
+
+#formularioCuota{
+    background-color: rgb(177, 86, 86);
     display: flex;
     align-items: center;
     flex-direction: column;
